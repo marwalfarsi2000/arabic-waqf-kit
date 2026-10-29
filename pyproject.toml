@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arabic-waqf-kit"
+version = "0.1.0"
+description = "Dependency-free, conservative Arabic sentence-ending diacritic cleanup for TTS"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Arabic Waqf Kit contributors"}]
+keywords = ["arabic", "tts", "diacritics", "waqf", "text-processing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: Arabic",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+arabic-waqf = "arabic_waqf_kit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
